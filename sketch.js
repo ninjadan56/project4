@@ -54,7 +54,6 @@ function draw() {
     vertex(i*20, map(spectrum[i], 0, 255, height, 0));
   }
   endShape();
-
 }
 
 function keyPressed() {
