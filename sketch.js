@@ -43,9 +43,7 @@ function draw() {
   rect(random(windowWidth), random(windowHeight), 12, f3);
   rect(random(windowWidth), random(windowHeight), 33, f4);
   rect(random(windowWidth), random(windowHeight), 80, f5);
-  rect(random(windowWidth), random(windowHeight),12, f6);
-
-
+  rect(random(windowWidth), random(windowHeight), 12, f6);
 
 	let spectrum = fft.analyze();
 
