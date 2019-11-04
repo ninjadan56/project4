@@ -55,9 +55,6 @@ function draw() {
   }
   endShape();
 
-
-
-
 }
 
 function keyPressed() {
