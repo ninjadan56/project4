@@ -34,27 +34,15 @@ function setup() {
 }
 
 function draw() {
+	background(153,23,134);
+	keyPressed();
 	let spectrum = fft.analyze();
 
   beginShape();
   for (i = 0; i < spectrum.length; i++) {
-    vertex(i, map(spectrum[i], 0, 255, height, 0));
+    vertex(i*20, map(spectrum[i], 0, 255, height, 0));
   }
   endShape();
-
- 	stroke(0);
-  fill(255, f1, f1);
-  rect(random(f1), random(f1), random(500), random(windowHeight));
-  fill(255, f2, f2);
-	rect(random(windowWidth), random(windowHeight), random(f2), random(f2));
-  fill(255, f3, f3);
-  rect(random(windowWidth), random(224), random(f3), random(f3));
-  fill(255, f4, f4);
-  rect(random(304), random(windowHeight), random(f4), random(f4));
-	fill(255, f5, f5);
-	rect(random(windowWidth), random(windowHeight), random(f5), random(f5));
-	fill(255, f6, f6);
-  rect(random(windowWidth), random(506), random(f6), random(f6));
 
 }
 
@@ -82,7 +70,7 @@ function keyPressed() {
  	if(keyCode == '71') {
  	tom1.play();
 	f5 = 0;
-  background(40,165, f5);
+  background(40,0, f5);
 	}
 	if(keyCode == '72') {
 	tom2.play();
