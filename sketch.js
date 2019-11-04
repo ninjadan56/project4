@@ -34,7 +34,6 @@ function setup() {
 }
 
 function draw() {
-	background(153,12, f7);
 	let spectrum = fft.analyze();
 
   beginShape();
@@ -45,7 +44,7 @@ function draw() {
 
  	stroke(0);
   fill(255, f1, f1);
-  rect(random(500), random(windowHeight), random(f1), random(f1));
+  rect(random(f1), random(f1), random(500), random(windowHeight));
   fill(255, f2, f2);
 	rect(random(windowWidth), random(windowHeight), random(f2), random(f2));
   fill(255, f3, f3);
@@ -57,37 +56,43 @@ function draw() {
 	fill(255, f6, f6);
   rect(random(windowWidth), random(506), random(f6), random(f6));
 
-
 }
 
 function keyPressed() {
  if(keyCode == "70") {
   kick.play();
    f1 = 0;
+   background(12,153, f1);
  }
   if(keyCode == '68') {
   snare.play();
    f2 = 0;
+   background(153,208, f2);
  }
   if(keyCode == '74') {
   hat.play();
    f3 = 0;
+   background(68,12, f3);
  }
   if(keyCode == '75') {
   ride.play();
    f4 = 0;
+   background(106,33, f4);
  }
  	if(keyCode == '71') {
  	tom1.play();
 	f5 = 0;
+  background(40,165, f5);
 	}
 	if(keyCode == '72') {
 	tom2.play();
  	f6 = 0;
-	}
+  background(13,12, f6);
+  }
 	if(keyCode == '85') {
 	crash.play();
 	f7 = 0;
+  background(153,12, f7);
  }
 }
 
